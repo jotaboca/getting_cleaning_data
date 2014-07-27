@@ -59,10 +59,10 @@ dataSubset <- cbind(dataSubject, dataLabels, dataMeans,dataStDev)
 dataSubset <- merge(activityLabels, dataSubset, by.x = "activityLabelID", by.y = "activityLabelID")
 
 # output to file. 
-write.csv(dataSubset, file = "tidydata.csv")
+write.table(dataSubset, file = "tidydata.txt", sep = ",")
 
 # get 2nd data set of averages of variables, grouped by activity and subject
 dataAverages <- ddply(dataSubset, c("activityLabelID","subjectID"), numcolwise(mean)) 
 
 # output 2nd data set (averages) to file. 
-write.csv(dataAverages, file = "tidydata2.csv")
+write.table(dataAverages, file = "tidydata2.txt", sep = ",")
