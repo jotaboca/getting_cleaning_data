@@ -1,4 +1,4 @@
-getting_cleaning_data
+## getting_cleaning_data
 
 Created one R script called run_analysis.R that does the following. 
 
